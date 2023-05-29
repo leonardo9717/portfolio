@@ -1,4 +1,14 @@
+
+
+document.getElementById("sendMessage").addEventListener("click", function(event){
+    event.preventDefault()
+  });
+
 function sendMail() {
+
+    let name =" "+ document.getElementById('name').value
+    let subject = "New message from "+name
+
 
     let array = [];
 
@@ -17,5 +27,6 @@ function sendMail() {
         });
     }
 
-    window.location.href = "mailto:leonardo.henriques16@gmail.com?body=" + encodeURIComponent(body)
+    window.location.href = "mailto:leonardo.henriques16@gmail.com?subject="+subject+"&body=" + encodeURIComponent(body)
+
   }
